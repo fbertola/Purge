@@ -1,6 +1,4 @@
-
 class Vertex2D:
-
     def __init__(self, x: float, y: float, t_x: float, t_y: float, color: int):
         self._x = x
         self._y = y
@@ -48,3 +46,4 @@ class Vertex2D:
     def color(self, color):
         self._color = color
 
+    stride = 20

@@ -81,7 +81,9 @@ class Quad:
         self._v2.color = abgr_color
         self._v3.color = abgr_color
 
-    def set_colors(self, top_left: int, top_right: int, bottom_left: int, bottom_right: int) -> None:
+    def set_colors(
+        self, top_left: int, top_right: int, bottom_left: int, bottom_right: int
+    ) -> None:
         self._v0.color = top_left
         self._v1.color = top_right
         self._v2.color = bottom_right
@@ -92,7 +94,7 @@ class Quad:
             self._v0.t_x * texture.width,
             self._v0.t_y * texture.height,
             self._v2.t_x * texture.width,
-            self._v2.t_y * texture.height
+            self._v2.t_y * texture.height,
         )
 
     @property

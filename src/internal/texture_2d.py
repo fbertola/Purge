@@ -1,4 +1,3 @@
-
 from bgfx import bgfx, as_void_ptr
 
 from src.model.pixmap import Pixmap
@@ -18,7 +17,7 @@ class Texture2D:
             False,
             0,
             bgfx.TextureFormat.BGRA8,
-            bgfx.copy(as_void_ptr(pixmap.pixels), len(pixmap.pixels))
+            bgfx.copy(as_void_ptr(pixmap.pixels), len(pixmap.pixels)),
         )
 
     @property
@@ -28,6 +27,10 @@ class Texture2D:
     @property
     def height(self):
         return self._height
+
+    @property
+    def texture(self):
+        return self._texture
 
     def dispose(self) -> None:
         bgfx.destroy(self._texture)

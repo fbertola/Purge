@@ -2,7 +2,6 @@ from typing import Dict, Tuple, Sequence
 
 
 class Pixmap:
-
     def __init__(self, pixels: bytes, width: int, height: int):
         self._pixels = self._swizzle_to_bgra(pixels)
         self._width = width
@@ -53,4 +52,3 @@ class Pixmap:
             swizzled_pixels[index + 3] = a
 
         return swizzled_pixels
-
